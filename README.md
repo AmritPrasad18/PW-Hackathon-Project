@@ -34,12 +34,6 @@ component-library/
 3. Click **Copy HTML** on any component card to copy code snippets.  
 4. Toggle between Light/Dark themes using the theme switcher.
 
-## Deployment (for submission)
-1. Push this folder to a **public GitHub repository**.  
-2. Enable **GitHub Pages** in repository settings.  
-3. Share:
-   - GitHub Repo Link  
-   - GitHub Pages Live Link  
+  
 
----
-Built with ❤️ for **PW Skills Hackathon**.
+
