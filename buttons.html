@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Buttons • CSS Component Library</title>
+<link rel="stylesheet" href="style.css"/>
+<script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><div class="logo"></div> CSS Component Library</div>
+    <nav class="nav">
+      <a href="index.html" class="">Home</a>
+      <a href="buttons.html" class="active">Buttons</a>
+      <a href="cards.html" class="">Cards</a>
+      <a href="navbars.html" class="">Navbars</a>
+    </nav>
+    <button class="toggle" data-theme-toggle onclick="toggleTheme()">...</button>
+  </header>
+  <div class="container">
+
+  <h1>Buttons</h1>
+  <p class="lead"> Click “Copy HTML” to use a component.</p>
+  <div class="grid grid-3">
+    
+    <div class="card">
+      <div class="title">01. Primary Button</div>
+      <div class="preview"><button class="btn btn-primary">Primary</button></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('btn_snippet_1', this)">Copy HTML</button>
+      </div>
+      <textarea id="btn_snippet_1" class="snippet" readonly><!-- Primary Button -->
+<button class="btn btn-primary">Primary</button>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">02. Secondary Button</div>
+      <div class="preview"><button class="btn btn-secondary">Secondary</button></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('btn_snippet_2', this)">Copy HTML</button>
+      </div>
+      <textarea id="btn_snippet_2" class="snippet" readonly><!-- Secondary Button -->
+<button class="btn btn-secondary">Secondary</button>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">03. Success Button</div>
+      <div class="preview"><button class="btn btn-success">Success</button></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('btn_snippet_3', this)">Copy HTML</button>
+      </div>
+      <textarea id="btn_snippet_3" class="snippet" readonly><!-- Success Button -->
+<button class="btn btn-success">Success</button>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">04. Danger Button</div>
+      <div class="preview"><button class="btn btn-danger">Danger</button></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('btn_snippet_4', this)">Copy HTML</button>
+      </div>
+      <textarea id="btn_snippet_4" class="snippet" readonly><!-- Danger Button -->
+<button class="btn btn-danger">Danger</button>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">05. Warning Button</div>
+      <div class="preview"><button class="btn btn-warning">Warning</button></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('btn_snippet_5', this)">Copy HTML</button>
+      </div>
+      <textarea id="btn_snippet_5" class="snippet" readonly><!-- Warning Button -->
+<button class="btn btn-warning">Warning</button>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">06. Info Button</div>
+      <div class="preview"><button class="btn btn-info">Info</button></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('btn_snippet_6', this)">Copy HTML</button>
+      </div>
+      <textarea id="btn_snippet_6" class="snippet" readonly><!-- Info Button -->
+<button class="btn btn-info">Info</button>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">07. Light Button</div>
+      <div class="preview"><button class="btn btn-light">Light</button></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('btn_snippet_7', this)">Copy HTML</button>
+      </div>
+      <textarea id="btn_snippet_7" class="snippet" readonly><!-- Light Button -->
+<button class="btn btn-light">Light</button>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">08. Dark Button</div>
+      <div class="preview"><button class="btn btn-dark">Dark</button></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('btn_snippet_8', this)">Copy HTML</button>
+      </div>
+      <textarea id="btn_snippet_8" class="snippet" readonly><!-- Dark Button -->
+<button class="btn btn-dark">Dark</button>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">09. Outline Button</div>
+      <div class="preview"><button class="btn btn-outline">Outline</button></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('btn_snippet_9', this)">Copy HTML</button>
+      </div>
+      <textarea id="btn_snippet_9" class="snippet" readonly><!-- Outline Button -->
+<button class="btn btn-outline">Outline</button>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">10. Ghost Button</div>
+      <div class="preview"><button class="btn btn-ghost">Ghost</button></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('btn_snippet_10', this)">Copy HTML</button>
+      </div>
+      <textarea id="btn_snippet_10" class="snippet" readonly><!-- Ghost Button -->
+<button class="btn btn-ghost">Ghost</button>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">11. Pill Button</div>
+      <div class="preview"><button class="btn btn-pill">Pill Button</button></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('btn_snippet_11', this)">Copy HTML</button>
+      </div>
+      <textarea id="btn_snippet_11" class="snippet" readonly><!-- Pill Button -->
+<button class="btn btn-pill">Pill Button</button>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">12. Gradient Button</div>
+      <div class="preview"><button class="btn btn-gradient">Gradient</button></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('btn_snippet_12', this)">Copy HTML</button>
+      </div>
+      <textarea id="btn_snippet_12" class="snippet" readonly><!-- Gradient Button -->
+<button class="btn btn-gradient">Gradient</button>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">13. Glow Button</div>
+      <div class="preview"><button class="btn btn-glow">Glow</button></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('btn_snippet_13', this)">Copy HTML</button>
+      </div>
+      <textarea id="btn_snippet_13" class="snippet" readonly><!-- Glow Button -->
+<button class="btn btn-glow">Glow</button>
+</textarea>
+    </div>
+
+  </div>
+
+  </div>
+  <!-- <footer>Built for PW Skills Hackathon • Fully responsive • Copy-to-clipboard ready • Dark mode supported</footer> -->
+</body>
+</html>

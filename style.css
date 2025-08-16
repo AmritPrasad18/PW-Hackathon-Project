@@ -1,0 +1,136 @@
+/* =====================================================
+   CSS Component Library - Global Styles
+   - Responsive, clean, and dark-mode ready
+   - Uses CSS variables for easy theming
+   ===================================================== */
+:root{
+  --bg: #0b1020;
+  --card: #121831;
+  --text: #e8ecff;
+  --muted: #aab3d4;
+  --primary: #6c8cff;
+  --primary-600:#5677ff;
+  --success:#22c55e;
+  --danger:#ef4444;
+  --warning:#f59e0b;
+  --info:#3b82f6;
+  --light:#f9fafb;
+  --dark:#0f172a;
+  --glow: 0 0 24px rgba(108,140,255,.35);
+  --radius: 16px;
+  --border: 1px solid rgba(255,255,255,0.08);
+}
+/* Light theme */
+:root[data-theme="light"]{
+  --bg: #f6f8ff;
+  --card: #ffffff;
+  --text: #0b1020;
+  --muted: #4b5563;
+  --primary:#3556ff;
+  --primary-600:#2747ff;
+  --dark:#111827;
+  --glow: 0 0 0 rgba(0,0,0,0);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";}
+body{
+  background: radial-gradient(1200px 800px at 20% 10%,rgba(108,140,255,.16),transparent) no-repeat,
+              radial-gradient(900px 600px at 90% 10%,rgba(59,130,246,.12),transparent) no-repeat,
+              radial-gradient(1000px 900px at 50% 100%,rgba(34,197,94,.10),transparent) no-repeat,
+              var(--bg);
+  color: var(--text);
+  min-height:100vh;
+  padding-top: 72px; /* for sticky header */
+  transition: background .3s ease, color .3s ease;
+}
+
+/* Sticky top nav shared across pages */
+.header{
+  position:fixed; inset:0 0 auto 0; height:72px; display:flex; align-items:center; gap:16px;
+  padding: 0 20px; background: linear-gradient(180deg, rgba(10,14,30,.85), rgba(10,14,30,.65));
+  backdrop-filter: blur(10px); border-bottom: var(--border); z-index:50;
+}
+.header .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.4px}
+.logo{
+  width:34px; height:34px; border-radius:12px;
+  background: conic-gradient(from 180deg, #6c8cff, #3b82f6, #22c55e, #6c8cff);
+  box-shadow: 0 6px 30px rgba(108,140,255,.5);
+}
+.nav{
+  display:flex; gap:10px; margin-left:auto;
+}
+.nav a{
+  text-decoration:none; color:var(--text); padding:10px 14px; border-radius:12px;
+  border: var(--border);
+}
+.nav a.active{ background: rgba(108,140,255,.12); box-shadow: var(--glow); }
+.toggle{
+  margin-left:8px; padding:10px 14px; border-radius:12px; border: var(--border); cursor:pointer; background:transparent; color:var(--text);
+}
+
+/* Page shells */
+.container{max-width:1200px; margin: 24px auto; padding: 0 20px;}
+h1{font-size: clamp(28px, 3vw, 36px); margin: 8px 0 2px}
+.lead{color:var(--muted); margin: 0 0 22px}
+
+/* Component Gallery Grid */
+.grid{
+  display:grid; gap:16px;
+}
+.grid.grid-3{ grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.grid.grid-1{ grid-template-columns: 1fr; }
+
+/* Component Card */
+.card{
+  background: var(--card); border: var(--border); border-radius: var(--radius); padding:16px; display:flex; flex-direction:column; gap:12px;
+  box-shadow: 0 6px 30px rgba(10,14,30,.35);
+}
+.card .title{font-weight:700;}
+.preview{ display:flex; align-items:center; justify-content:center; gap: 12px; padding: 18px; background: rgba(255,255,255,.03); border-radius: 12px; border: var(--border); min-height: 80px;}
+.actions{ display:flex; gap:8px; }
+.btn-copy, .btn-live{
+  padding:10px 14px; border-radius: 12px; border: var(--border); background: transparent; color: var(--text); cursor:pointer;
+}
+.btn-copy.copied{ outline: 2px solid var(--success); }
+
+/* Core Button Styles */
+button, .btn{ font-weight:600; border-radius: 12px; padding:10px 16px; border: none; cursor:pointer; display:inline-flex; align-items:center; gap:8px; }
+.btn:focus{ outline: 2px solid rgba(255,255,255,.2); outline-offset: 2px; }
+.btn-primary{ background: linear-gradient(180deg, var(--primary), var(--primary-600)); color:white; box-shadow: var(--glow);}
+.btn-secondary{ background:#334155; color:white; }
+.btn-success{ background: var(--success); color: #06210f; }
+.btn-danger{ background: var(--danger); color: white; }
+.btn-warning{ background: var(--warning); color: #3a2a00; }
+.btn-info{ background: var(--info); color: white; }
+.btn-light{ background: var(--light); color: #111827; border: 1px solid #e5e7eb; }
+.btn-dark{ background: #111827; color: white; }
+.btn-outline{ background: transparent; color: var(--text); border: 2px solid var(--primary); }
+.btn-ghost{ background: transparent; color: var(--text); border: 1px dashed rgba(255,255,255,.25); }
+.btn-pill{ border-radius: 999px; background: var(--primary); color:white; padding:10px 18px; }
+.btn-gradient{ background: linear-gradient(90deg, #6c8cff, #3b82f6, #22c55e); color:white; }
+.btn-glow{ background:#0b1020; color:white; box-shadow: 0 0 18px rgba(108,140,255,.45) inset, 0 0 16px rgba(108,140,255,.45); border:1px solid rgba(108,140,255,.35);}
+
+/* Card Layout Helpers */
+.demo-card{ display:flex; flex-direction:column; gap:10px; background: #0e1530; color: var(--text); border-radius: 14px; overflow:hidden; border: var(--border); }
+.demo-card img{ width:100%; height:150px; object-fit:cover; }
+.demo-card .p{ padding:12px; color: var(--muted); }
+.demo-card .row{ display:flex; gap:10px; padding: 0 12px 12px; }
+.badge{ padding:4px 10px; border-radius:999px; font-size:12px; border: var(--border); color: var(--muted); display:inline-block; }
+
+/* Navbar styles */
+.navbar{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  background: rgba(255,255,255,.03); border: var(--border); border-radius: 14px; padding: 12px 14px;
+}
+.navbar .brand{ font-weight: 800; }
+.navbar .links{ display:flex; gap:10px; }
+.navbar .links a{ text-decoration:none; color: var(--text); padding:8px 12px; border-radius:10px; }
+.navbar .links a:hover{ background: rgba(255,255,255,.06); }
+
+/* Fixed/Sticky helpers for navbars preview */
+.is-fixed{ position: sticky; top: 0; }
+.is-sticky{ position: sticky; top: 0; backdrop-filter: blur(8px); }
+
+/* Code box hidden but selectable for copy */
+.snippet{ position:absolute; left:-9999px; top:-9999px; opacity:0; pointer-events:none; }
+footer{ color:var(--muted); font-size: 13px; text-align:center; padding: 28px 0 60px; }

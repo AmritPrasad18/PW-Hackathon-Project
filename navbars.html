@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Navbars • CSS Component Library</title>
+<link rel="stylesheet" href="style.css"/>
+<script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><div class="logo"></div> CSS Component Library</div>
+    <nav class="nav">
+      <a href="index.html" class="">Home</a>
+      <a href="buttons.html" class="">Buttons</a>
+      <a href="cards.html" class="">Cards</a>
+      <a href="navbars.html" class="active">Navbars</a>
+    </nav>
+    <button class="toggle" data-theme-toggle onclick="toggleTheme()">...</button>
+  </header>
+  <div class="container">
+
+  <h1>Navbars</h1>
+  <p class="lead">Each preview is 1-per-row as required.</p>
+  <div class="grid grid-1">
+    
+    <div class="card">
+      <div class="title">01. Basic</div>
+      <div class="preview"><nav class="navbar">
+  <div class="brand">Brand</div>
+  <div class="links">
+    <a href="#">Home</a><a href="#">Docs</a><a href="#">About</a>
+  </div>
+</nav></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('nav_snippet_1', this)">Copy HTML</button>
+      </div>
+      <textarea id="nav_snippet_1" class="snippet" readonly><!-- Basic Navbar -->
+<nav class="navbar">
+  <div class="brand">Brand</div>
+  <div class="links">
+    <a href="#">Home</a><a href="#">Docs</a><a href="#">About</a>
+  </div>
+</nav>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">02. Centered</div>
+      <div class="preview"><nav class="navbar" style="justify-content:center;">
+  <div class="links">
+    <a href="#">Home</a><a href="#">Components</a><a href="#">Contact</a>
+  </div>
+</nav></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('nav_snippet_2', this)">Copy HTML</button>
+      </div>
+      <textarea id="nav_snippet_2" class="snippet" readonly><!-- Centered Navbar -->
+<nav class="navbar" style="justify-content:center;">
+  <div class="links">
+    <a href="#">Home</a><a href="#">Components</a><a href="#">Contact</a>
+  </div>
+</nav>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">03. With Search</div>
+      <div class="preview"><nav class="navbar">
+  <div class="brand">Brand</div>
+  <input placeholder="Search..." style="padding:8px 12px;border-radius:10px;border:var(--border);background:transparent;color:var(--text);flex:1;margin:0 12px">
+  <div class="links"><a href="#">Login</a></div>
+</nav></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('nav_snippet_3', this)">Copy HTML</button>
+      </div>
+      <textarea id="nav_snippet_3" class="snippet" readonly><!-- With Search Navbar -->
+<nav class="navbar">
+  <div class="brand">Brand</div>
+  <input placeholder="Search..." style="padding:8px 12px;border-radius:10px;border:var(--border);background:transparent;color:var(--text);flex:1;margin:0 12px">
+  <div class="links"><a href="#">Login</a></div>
+</nav>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">04. With Icons</div>
+      <div class="preview"><nav class="navbar">
+  <div class="brand">⚡ Brand</div>
+  <div class="links">
+    <a href="#">🏠</a><a href="#">📦</a><a href="#">📞</a>
+  </div>
+</nav></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('nav_snippet_4', this)">Copy HTML</button>
+      </div>
+      <textarea id="nav_snippet_4" class="snippet" readonly><!-- With Icons Navbar -->
+<nav class="navbar">
+  <div class="brand">⚡ Brand</div>
+  <div class="links">
+    <a href="#">🏠</a><a href="#">📦</a><a href="#">📞</a>
+  </div>
+</nav>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">05. Transparent Overlay</div>
+      <div class="preview"><nav class="navbar" style="background:transparent; border:1px dashed rgba(255,255,255,.25)">
+  <div class="brand">Brand</div>
+  <div class="links"><a href="#">Docs</a><a href="#">Blog</a></div>
+</nav></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('nav_snippet_5', this)">Copy HTML</button>
+      </div>
+      <textarea id="nav_snippet_5" class="snippet" readonly><!-- Transparent Overlay Navbar -->
+<nav class="navbar" style="background:transparent; border:1px dashed rgba(255,255,255,.25)">
+  <div class="brand">Brand</div>
+  <div class="links"><a href="#">Docs</a><a href="#">Blog</a></div>
+</nav>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">06. Sticky</div>
+      <div class="preview"><nav class="navbar is-sticky">
+  <div class="brand">Sticky</div>
+  <div class="links"><a href="#">Home</a><a href="#">Pricing</a></div>
+</nav></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('nav_snippet_6', this)">Copy HTML</button>
+      </div>
+      <textarea id="nav_snippet_6" class="snippet" readonly><!-- Sticky Navbar -->
+<nav class="navbar is-sticky">
+  <div class="brand">Sticky</div>
+  <div class="links"><a href="#">Home</a><a href="#">Pricing</a></div>
+</nav>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">07. Fixed Header Clone</div>
+      <div class="preview"><nav class="navbar" style="position:sticky; top:0; z-index:10; backdrop-filter: blur(6px)">
+  <div class="brand">Fixed</div>
+  <div class="links"><a href="#">Features</a><a href="#">Changelog</a></div>
+</nav></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('nav_snippet_7', this)">Copy HTML</button>
+      </div>
+      <textarea id="nav_snippet_7" class="snippet" readonly><!-- Fixed Header Clone Navbar -->
+<nav class="navbar" style="position:sticky; top:0; z-index:10; backdrop-filter: blur(6px)">
+  <div class="brand">Fixed</div>
+  <div class="links"><a href="#">Features</a><a href="#">Changelog</a></div>
+</nav>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">08. With CTA</div>
+      <div class="preview"><nav class="navbar">
+  <div class="brand">Brand</div>
+  <div class="links"><a href="#">Docs</a><a href="#">Blog</a></div>
+  <button class="btn btn-primary">Get Started</button>
+</nav></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('nav_snippet_8', this)">Copy HTML</button>
+      </div>
+      <textarea id="nav_snippet_8" class="snippet" readonly><!-- With CTA Navbar -->
+<nav class="navbar">
+  <div class="brand">Brand</div>
+  <div class="links"><a href="#">Docs</a><a href="#">Blog</a></div>
+  <button class="btn btn-primary">Get Started</button>
+</nav>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">09. Split Logo</div>
+      <div class="preview"><nav class="navbar">
+  <div class="links"><a href="#">Home</a><a href="#">Playground</a></div>
+  <div class="brand">Brand</div>
+  <div class="links"><a href="#">Login</a><a href="#">Sign up</a></div>
+</nav></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('nav_snippet_9', this)">Copy HTML</button>
+      </div>
+      <textarea id="nav_snippet_9" class="snippet" readonly><!-- Split Logo Navbar -->
+<nav class="navbar">
+  <div class="links"><a href="#">Home</a><a href="#">Playground</a></div>
+  <div class="brand">Brand</div>
+  <div class="links"><a href="#">Login</a><a href="#">Sign up</a></div>
+</nav>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">10. Mobile Bottom Bar</div>
+      <div class="preview"><nav class="navbar" style="position:sticky; bottom:0;">
+  <div class="links" style="justify-content:space-between; width:100%">
+    <a href="#">🏠 Home</a><a href="#">🔍 Search</a><a href="#">➕ New</a><a href="#">👤 Profile</a>
+  </div>
+</nav></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('nav_snippet_10', this)">Copy HTML</button>
+      </div>
+      <textarea id="nav_snippet_10" class="snippet" readonly><!-- Mobile Bottom Bar Navbar -->
+<nav class="navbar" style="position:sticky; bottom:0;">
+  <div class="links" style="justify-content:space-between; width:100%">
+    <a href="#">🏠 Home</a><a href="#">🔍 Search</a><a href="#">➕ New</a><a href="#">👤 Profile</a>
+  </div>
+</nav>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">11. With Breadcrumb</div>
+      <div class="preview"><nav class="navbar">
+  <div class="brand">Brand</div>
+  <div class="links"><a href="#">Home</a> / <a href="#">Library</a> / <a href="#">Data</a></div>
+</nav></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('nav_snippet_11', this)">Copy HTML</button>
+      </div>
+      <textarea id="nav_snippet_11" class="snippet" readonly><!-- With Breadcrumb Navbar -->
+<nav class="navbar">
+  <div class="brand">Brand</div>
+  <div class="links"><a href="#">Home</a> / <a href="#">Library</a> / <a href="#">Data</a></div>
+</nav>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">12. Minimal Edge</div>
+      <div class="preview"><nav class="navbar" style="border:none; background: none; padding: 0;">
+  <div class="links" style="gap:20px">
+    <a href="#">Home</a><a href="#">Docs</a><a href="#">Contact</a>
+  </div>
+</nav></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('nav_snippet_12', this)">Copy HTML</button>
+      </div>
+      <textarea id="nav_snippet_12" class="snippet" readonly><!-- Minimal Edge Navbar -->
+<nav class="navbar" style="border:none; background: none; padding: 0;">
+  <div class="links" style="gap:20px">
+    <a href="#">Home</a><a href="#">Docs</a><a href="#">Contact</a>
+  </div>
+</nav>
+</textarea>
+    </div>
+
+  </div>
+
+  </div>
+  <footer>Built for PW Skills Hackathon • Fully responsive • Copy-to-clipboard ready • Dark mode supported</footer>
+</body>
+</html>

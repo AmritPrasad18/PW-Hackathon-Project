@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Home • CSS Component Library</title>
+<link rel="stylesheet" href="style.css"/>
+<script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><div class="logo"></div> CSS Component Library</div>
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="buttons.html" class="">Buttons</a>
+      <a href="cards.html" class="">Cards</a>
+      <a href="navbars.html" class="">Navbars</a>
+    </nav>
+    <button class="toggle" data-theme-toggle onclick="toggleTheme()">...</button>
+  </header>
+  <div class="container">
+
+  <h1>CSS Component Library</h1>
+  <p class="lead">Reusable Buttons, Cards, and Navbars with live previews, copy-to-clipboard, and a clean responsive layout.</p>
+
+  <div class="grid grid-3">
+    <div class="card">
+      <div class="title">Buttons </div>
+      <div class="preview">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-outline">Outline</button>
+        <button class="btn btn-pill">Pill</button>
+      </div>
+      <div class="actions">
+        <a class="btn-live" href="buttons.html">Open Buttons Page →</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title">Cards (12 layouts)</div>
+      <div class="preview">
+        <div class="badge">Profile</div><div class="badge">Product</div><div class="badge">Blog</div>
+      </div>
+      <div class="actions">
+        <a class="btn-live" href="cards.html">Open Cards Page →</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="title">Navbars </div>
+      <div class="preview">
+        <div class="badge">Fixed</div><div class="badge">Centered</div><div class="badge">With Search</div>
+      </div>
+      <div class="actions">
+        <a class="btn-live" href="navbars.html">Open Navbars Page →</a>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <!-- <footer>uilt for PW Skills Hackathon • Fully responsive • Copy-to-clipboard ready • Dark mode supported</footer> -->
+</body>
+</html>

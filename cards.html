@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cards • CSS Component Library</title>
+<link rel="stylesheet" href="style.css"/>
+<script defer src="script.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="brand"><div class="logo"></div> CSS Component Library</div>
+    <nav class="nav">
+      <a href="index.html" class="">Home</a>
+      <a href="buttons.html" class="">Buttons</a>
+      <a href="cards.html" class="active">Cards</a>
+      <a href="navbars.html" class="">Navbars</a>
+    </nav>
+    <button class="toggle" data-theme-toggle onclick="toggleTheme()">...</button>
+  </header>
+  <div class="container">
+
+  <h1>Cards</h1>
+  <p class="lead"> Copy snippets for quick use.</p>
+  <div class="grid grid-3">
+    
+    <div class="card">
+      <div class="title">01. Image Top</div>
+      <div class="preview"><div class="demo-card">
+  <img src="https://picsum.photos/seed/1/600/320" alt="cover"/>
+  <div class="p">
+    <strong>Card Title</strong><br/>
+    <span class="badge">Category</span>
+    <p class="p">Short description for card with image on top.</p>
+  </div>
+  <div class="row">
+    <button class="btn btn-primary">View</button>
+    <button class="btn btn-outline">Share</button>
+  </div>
+</div></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('card_snippet_1', this)">Copy HTML</button>
+      </div>
+      <textarea id="card_snippet_1" class="snippet" readonly><!-- Image Top Card -->
+<div class="demo-card">
+  <img src="https://picsum.photos/seed/1/600/320" alt="cover"/>
+  <div class="p">
+    <strong>Card Title</strong><br/>
+    <span class="badge">Category</span>
+    <p class="p">Short description for card with image on top.</p>
+  </div>
+  <div class="row">
+    <button class="btn btn-primary">View</button>
+    <button class="btn btn-outline">Share</button>
+  </div>
+</div>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">02. Text Only</div>
+      <div class="preview"><div class="demo-card">
+  <div class="p">
+    <strong>Text Only Card</strong>
+    <p class="p">Clean card with just text content and actions.</p>
+  </div>
+  <div class="row">
+    <button class="btn btn-primary">Continue</button>
+  </div>
+</div></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('card_snippet_2', this)">Copy HTML</button>
+      </div>
+      <textarea id="card_snippet_2" class="snippet" readonly><!-- Text Only Card -->
+<div class="demo-card">
+  <div class="p">
+    <strong>Text Only Card</strong>
+    <p class="p">Clean card with just text content and actions.</p>
+  </div>
+  <div class="row">
+    <button class="btn btn-primary">Continue</button>
+  </div>
+</div>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">03. With Badge</div>
+      <div class="preview"><div class="demo-card">
+  <img src="https://picsum.photos/seed/2/600/320" alt="cover"/>
+  <div class="p">
+    <span class="badge">New</span>
+    <strong>Featured Item</strong>
+    <p class="p">Highlight content using subtle badges.</p>
+  </div>
+</div></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('card_snippet_3', this)">Copy HTML</button>
+      </div>
+      <textarea id="card_snippet_3" class="snippet" readonly><!-- With Badge Card -->
+<div class="demo-card">
+  <img src="https://picsum.photos/seed/2/600/320" alt="cover"/>
+  <div class="p">
+    <span class="badge">New</span>
+    <strong>Featured Item</strong>
+    <p class="p">Highlight content using subtle badges.</p>
+  </div>
+</div>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">04. Profile</div>
+      <div class="preview"><div class="demo-card">
+  <img src="https://picsum.photos/seed/3/600/320" alt="avatar"/>
+  <div class="p">
+    <strong>Alex Johnson</strong>
+    <p class="p">Frontend Engineer • UI Systems</p>
+    <div class="row">
+      <button class="btn btn-primary">Follow</button>
+      <button class="btn btn-outline">Message</button>
+    </div>
+  </div>
+</div></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('card_snippet_4', this)">Copy HTML</button>
+      </div>
+      <textarea id="card_snippet_4" class="snippet" readonly><!-- Profile Card -->
+<div class="demo-card">
+  <img src="https://picsum.photos/seed/3/600/320" alt="avatar"/>
+  <div class="p">
+    <strong>Alex Johnson</strong>
+    <p class="p">Frontend Engineer • UI Systems</p>
+    <div class="row">
+      <button class="btn btn-primary">Follow</button>
+      <button class="btn btn-outline">Message</button>
+    </div>
+  </div>
+</div>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">05. Product</div>
+      <div class="preview"><div class="demo-card">
+  <img src="https://picsum.photos/seed/4/600/320" alt="product"/>
+  <div class="p">
+    <strong>Wireless Headphones</strong>
+    <p class="p">$89 • Free delivery</p>
+    <div class="row">
+      <button class="btn btn-success">Buy</button>
+      <button class="btn btn-outline">Details</button>
+    </div>
+  </div>
+</div></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('card_snippet_5', this)">Copy HTML</button>
+      </div>
+      <textarea id="card_snippet_5" class="snippet" readonly><!-- Product Card -->
+<div class="demo-card">
+  <img src="https://picsum.photos/seed/4/600/320" alt="product"/>
+  <div class="p">
+    <strong>Wireless Headphones</strong>
+    <p class="p">$89 • Free delivery</p>
+    <div class="row">
+      <button class="btn btn-success">Buy</button>
+      <button class="btn btn-outline">Details</button>
+    </div>
+  </div>
+</div>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">06. Blog</div>
+      <div class="preview"><div class="demo-card">
+  <img src="https://picsum.photos/seed/5/600/320" alt="blog cover"/>
+  <div class="p">
+    <strong>Design Systems 101</strong>
+    <p class="p">Learn how to build scalable UI libraries.</p>
+  </div>
+</div></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('card_snippet_6', this)">Copy HTML</button>
+      </div>
+      <textarea id="card_snippet_6" class="snippet" readonly><!-- Blog Card -->
+<div class="demo-card">
+  <img src="https://picsum.photos/seed/5/600/320" alt="blog cover"/>
+  <div class="p">
+    <strong>Design Systems 101</strong>
+    <p class="p">Learn how to build scalable UI libraries.</p>
+  </div>
+</div>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">07. Horizontal</div>
+      <div class="preview"><div class="demo-card" style="display:grid; grid-template-columns: 180px 1fr;">
+  <img src="https://picsum.photos/seed/6/600/320" alt="cover"/>
+  <div class="p">
+    <strong>Side Image Card</strong>
+    <p class="p">Image on the left, text on the right.</p>
+  </div>
+</div></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('card_snippet_7', this)">Copy HTML</button>
+      </div>
+      <textarea id="card_snippet_7" class="snippet" readonly><!-- Horizontal Card -->
+<div class="demo-card" style="display:grid; grid-template-columns: 180px 1fr;">
+  <img src="https://picsum.photos/seed/6/600/320" alt="cover"/>
+  <div class="p">
+    <strong>Side Image Card</strong>
+    <p class="p">Image on the left, text on the right.</p>
+  </div>
+</div>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">08. Overlay</div>
+      <div class="preview"><div class="demo-card" style="position:relative; overflow:hidden;">
+  <img src="https://picsum.photos/seed/7/600/320" alt="cover"/>
+  <div class="p" style="position:absolute; inset:auto 12px 12px 12px; background: rgba(0,0,0,.35); border-radius:12px;">
+    <strong>Overlay Content</strong>
+    <p class="p">Place text over images with contrast.</p>
+  </div>
+</div></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('card_snippet_8', this)">Copy HTML</button>
+      </div>
+      <textarea id="card_snippet_8" class="snippet" readonly><!-- Overlay Card -->
+<div class="demo-card" style="position:relative; overflow:hidden;">
+  <img src="https://picsum.photos/seed/7/600/320" alt="cover"/>
+  <div class="p" style="position:absolute; inset:auto 12px 12px 12px; background: rgba(0,0,0,.35); border-radius:12px;">
+    <strong>Overlay Content</strong>
+    <p class="p">Place text over images with contrast.</p>
+  </div>
+</div>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">09. Stats</div>
+      <div class="preview"><div class="demo-card">
+  <div class="p">
+    <strong>Weekly Stats</strong>
+    <p class="p">Visitors: <b>12,431</b> • Signups: <b>421</b></p>
+  </div>
+</div></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('card_snippet_9', this)">Copy HTML</button>
+      </div>
+      <textarea id="card_snippet_9" class="snippet" readonly><!-- Stats Card -->
+<div class="demo-card">
+  <div class="p">
+    <strong>Weekly Stats</strong>
+    <p class="p">Visitors: <b>12,431</b> • Signups: <b>421</b></p>
+  </div>
+</div>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">10. CTA Footer</div>
+      <div class="preview"><div class="demo-card">
+  <div class="p">
+    <strong>Ready to Start?</strong>
+    <p class="p">Kick off your next project in minutes.</p>
+  </div>
+  <div class="row">
+    <button class="btn btn-primary">Get Started</button>
+  </div>
+</div></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('card_snippet_10', this)">Copy HTML</button>
+      </div>
+      <textarea id="card_snippet_10" class="snippet" readonly><!-- CTA Footer Card -->
+<div class="demo-card">
+  <div class="p">
+    <strong>Ready to Start?</strong>
+    <p class="p">Kick off your next project in minutes.</p>
+  </div>
+  <div class="row">
+    <button class="btn btn-primary">Get Started</button>
+  </div>
+</div>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">11. Minimal</div>
+      <div class="preview"><div class="demo-card">
+  <div class="p">
+    <strong>Minimal Card</strong>
+    <p class="p">Simple layout for content blocks.</p>
+  </div>
+</div></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('card_snippet_11', this)">Copy HTML</button>
+      </div>
+      <textarea id="card_snippet_11" class="snippet" readonly><!-- Minimal Card -->
+<div class="demo-card">
+  <div class="p">
+    <strong>Minimal Card</strong>
+    <p class="p">Simple layout for content blocks.</p>
+  </div>
+</div>
+</textarea>
+    </div>
+
+    <div class="card">
+      <div class="title">12. With Icons</div>
+      <div class="preview"><div class="demo-card">
+  <div class="p">
+    <strong>With Icons</strong>
+    <p class="p">✔ Fast • ⚡ Lightweight • 🔒 Secure</p>
+  </div>
+</div></div>
+      <div class="actions">
+        <button class="btn-copy" onclick="copySnippet('card_snippet_12', this)">Copy HTML</button>
+      </div>
+      <textarea id="card_snippet_12" class="snippet" readonly><!-- With Icons Card -->
+<div class="demo-card">
+  <div class="p">
+    <strong>With Icons</strong>
+    <p class="p">✔ Fast • ⚡ Lightweight • 🔒 Secure</p>
+  </div>
+</div>
+</textarea>
+    </div>
+
+  </div>
+
+  </div>
+  <footer>Built for PW Skills Hackathon • Fully responsive • Copy-to-clipboard ready • Dark mode supported</footer>
+</body>
+</html>
